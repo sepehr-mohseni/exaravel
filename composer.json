@@ -1,0 +1,71 @@
+{
+    "name": "sepehr-mohseni/exaravel",
+    "description": "Laravel wrapper for the Exa.ai API",
+    "keywords": [
+        "laravel",
+        "exa",
+        "exa.ai",
+        "search",
+        "ai",
+        "semantic-search",
+        "web-search"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sepehr Mohseni",
+            "email": "isepehrmohseni@gmail.com",
+            "homepage": "https://github.com/sepehr-mohseni"
+        }
+    ],
+    "homepage": "https://github.com/sepehr-mohseni/exaravel",
+    "support": {
+        "issues": "https://github.com/sepehr-mohseni/exaravel/issues",
+        "source": "https://github.com/sepehr-mohseni/exaravel"
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "illuminate/http": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "pestphp/pest": "^2.0|^3.0",
+        "phpstan/phpstan": "^1.10|^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sepehr_Mohseni\\Exaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sepehr_Mohseni\\Exaravel\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sepehr_Mohseni\\Exaravel\\ExaravelServiceProvider"
+            ],
+            "aliases": {
+                "Exa": "Sepehr_Mohseni\\Exaravel\\Facades\\Exa"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
