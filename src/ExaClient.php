@@ -6,7 +6,6 @@ namespace Sepehr_Mohseni\Exaravel;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
-use Illuminate\Support\Facades\Context;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Sepehr_Mohseni\Exaravel\Builders\AnswerBuilder;
@@ -192,8 +191,10 @@ final class ExaClient implements ExaClientInterface
     {
         $requestId = $this->generateRequestId();
 
-        // Add request ID to Laravel Context for observability
-        Context::add('exa_request_id', $requestId);
+        // Add request ID to Laravel Context for observability (Laravel 11+)
+        if (class_exists(\Illuminate\Support\Facades\Context::class)) {
+            \Illuminate\Support\Facades\Context::add('exa_request_id', $requestId);
+        }
 
         $this->logRequest($endpoint, $payload, $requestId);
 
