@@ -1,7 +1,7 @@
 # Exaravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sepehr-mohseni/exaravel.svg?style=flat-square)](https://packagist.org/packages/sepehr-mohseni/exaravel)
-[![Tests](https://img.shields.io/github/actions/workflow/status/sepehr-mohseni/exaravel/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sepehr-mohseni/exaravel/actions/workflows/tests.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/sepehr-mohseni/exaravel/tests.yml?branch=master&label=tests&style=flat-square)](https://github.com/sepehr-mohseni/exaravel/actions/workflows/tests.yml)
 [![PHPStan](https://img.shields.io/badge/PHPStan-level%209-brightgreen.svg?style=flat-square)](https://phpstan.org/)
 [![License](https://img.shields.io/packagist/l/sepehr-mohseni/exaravel.svg?style=flat-square)](https://packagist.org/packages/sepehr-mohseni/exaravel)
 
